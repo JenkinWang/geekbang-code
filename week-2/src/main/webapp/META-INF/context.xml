@@ -12,7 +12,7 @@
               type="javax.sql.DataSource" auth="Container"
               factory="org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory"
               maxActive="100" maxIdle="30" maxWait="10000"
-              username="××××" password="××××"
+              username="****" password="*****"
               driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://××××:3306/××××">
     </Resource>-->
@@ -20,5 +20,6 @@
     <Resource name="jdbc/DBDataSourceManager"
               type="com.geekbang.web.db.DBConnectionManager"
               factory="org.apache.naming.factory.BeanFactory">
+              url="jdbc:mysql://*********:3306/*******?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false">
     </Resource>
 </Context>
