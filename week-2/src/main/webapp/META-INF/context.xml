@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+
+    <Resource name="jdbc/EmployeeDB"
+              type="javax.sql.DataSource" auth="Container"
+              maxActive="100" maxIdle="30" maxWait="10000"
+              username="root" password="data_center#"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://106.14.38.168:3306/data_center?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false">
+    </Resource>
+</Context>
