@@ -13,4 +13,14 @@
         <servlet-name>custom-servlet</servlet-name>
         <url-pattern>/custom</url-pattern>
     </servlet-mapping>
+
+    <filter>
+        <filter-name>encoding-filter</filter-name>
+        <filter-class>com.geekbang.web.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encoding-filter</filter-name>
+        <servlet-name>custom-servlet</servlet-name>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
 </web-app>

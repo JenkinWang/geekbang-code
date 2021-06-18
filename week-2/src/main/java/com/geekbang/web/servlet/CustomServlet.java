@@ -1,13 +1,13 @@
 package com.geekbang.web.servlet;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+
+import com.geekbang.web.db.DBConnectionManager;
+
+import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -19,6 +19,9 @@ import java.sql.SQLException;
  */
 public class CustomServlet extends HttpServlet {
 
+    @Resource(name = "jdbc/DBDataSourceManager")
+    private DBConnectionManager dbConnectionManager;
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("------------- custom servlet -------------");
@@ -26,7 +29,7 @@ public class CustomServlet extends HttpServlet {
         PrintWriter printWriter = response.getWriter();
         Connection connection = null;
         try {
-            connection = getConnect();
+            getConnection();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -45,9 +48,7 @@ public class CustomServlet extends HttpServlet {
         }
     }
 
-    private Connection getConnect() throws NamingException, SQLException {
-        Context initialContext = new InitialContext();
-        DataSource dataSource = (DataSource) initialContext.lookup("jdbc/EmployeeDB");
-        return dataSource.getConnection();
+    private Connection getConnection() {
+        return dbConnectionManager.getConnection();
     }
 }
