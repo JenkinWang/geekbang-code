@@ -6,12 +6,12 @@
          metadata-complete="true" version="3.0">
 
     <servlet>
-        <servlet-name>custom-servlet</servlet-name>
-        <servlet-class>com.geekbang.web.servlet.CustomServlet</servlet-class>
+        <servlet-name>jndi-servlet</servlet-name>
+        <servlet-class>com.geekbang.web.servlet.JNDIServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>custom-servlet</servlet-name>
-        <url-pattern>/custom</url-pattern>
+        <servlet-name>jndi-servlet</servlet-name>
+        <url-pattern>/jndi</url-pattern>
     </servlet-mapping>
 
     <filter>
@@ -20,7 +20,7 @@
     </filter>
     <filter-mapping>
         <filter-name>encoding-filter</filter-name>
-        <servlet-name>custom-servlet</servlet-name>
+        <servlet-name>jndi-servlet</servlet-name>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
 </web-app>

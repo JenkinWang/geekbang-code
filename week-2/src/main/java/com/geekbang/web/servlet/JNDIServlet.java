@@ -18,7 +18,7 @@ import java.sql.SQLException;
  * @author <a href="mailto:jenkinsmile@gmail.com">JenkinWang</a>
  * @since 1.0.0
  */
-public class CustomServlet extends HttpServlet {
+public class JNDIServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
