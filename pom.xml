@@ -11,6 +11,7 @@
     <modules>
         <module>week-1</module>
         <module>week-2</module>
+        <module>week-3</module>
     </modules>
 
     <properties>
@@ -19,6 +20,7 @@
         <maven.jar.version>3.2.0</maven.jar.version>
         <maven.war.version>3.3.1</maven.war.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
+        <tomcat8.version>8.5.68</tomcat8.version>
     </properties>
 
     <build>
