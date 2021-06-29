@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--first-->
+    <bean id="exampleBean" class="com.geekbang.spring.service.impl.di.ExampleBean">
+        <constructor-arg type="int" value="2021"/>
+        <constructor-arg type="java.lang.String" value="43"/>
+    </bean>
+
+    <!--second-->
+    <bean id="exampleBean" class="com.geekbang.spring.service.impl.di.ExampleBean">
+        <constructor-arg index="0" value="2021"/>
+        <constructor-arg index="1" value="43"/>
+    </bean>
+
+    <!--third-->
+    <bean id="exampleBean" class="com.geekbang.spring.service.impl.di.ExampleBean">
+        <constructor-arg name="years" value="2021"/>
+        <constructor-arg name="ultimateAnswer" value="43"/>
+    </bean>
+</beans>
