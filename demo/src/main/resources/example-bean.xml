@@ -20,4 +20,6 @@
         <constructor-arg name="years" value="2021"/>
         <constructor-arg name="ultimateAnswer" value="43"/>
     </bean>
+
+    <bean id="exampleBeanOne" class="com.geekbang.spring.bean.ExampleBean" init-method="init" destroy-method="cleanUp"/>
 </beans>

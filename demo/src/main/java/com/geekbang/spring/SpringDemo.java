@@ -5,6 +5,7 @@ import com.geekbang.spring.service.impl.AccountService;
 import com.geekbang.spring.service.impl.di.A;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 
@@ -38,5 +39,9 @@ public class SpringDemo {
         // test circular dependencies
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("circular-dependencies.xml");
         A a = (A) context.getBean("a");
+
+        // register shutdown hook
+        ConfigurableApplicationContext configurableApplicationContext = new ClassPathXmlApplicationContext("user.xml");
+        configurableApplicationContext.registerShutdownHook();
     }
 }
