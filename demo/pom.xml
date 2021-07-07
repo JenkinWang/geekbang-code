@@ -21,6 +21,13 @@
     </properties>
 
     <dependencies>
+        <!--Servlet 依赖-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
 
         <!--Spring 依赖-->
         <dependency>
@@ -66,6 +73,11 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>5.5.1</version>
+        </dependency>
         <!--SpringBoot 依赖-->
 
     </dependencies>

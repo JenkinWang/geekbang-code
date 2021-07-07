@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+    <description>Custom Tags</description>
+    <tlib-version>2.2</tlib-version>
+    <!--<jsp-version>2.0</jsp-version>-->
+    <short-name>ct</short-name>
+    <tag>
+        <name>UserInfo</name>
+        <tag-class>com.geekbang.web.tags.UserInfoTag</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>user</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>com.geekbang.web.entity.UserInfo</type>
+        </attribute>
+    </tag>
+</taglib>
