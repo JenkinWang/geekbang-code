@@ -8,3 +8,6 @@
 
 ### week-3
 - 作业地址：https://github.com/JenkinWang/geekbang-code/tree/master/week-3
+
+### formal-week-1
+- 作业地址：https://github.com/JenkinWang/geekbang-code/tree/master/formal-week-1
