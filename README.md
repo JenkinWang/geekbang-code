@@ -11,3 +11,9 @@
 
 ### formal-week-1
 - 作业地址：https://github.com/JenkinWang/geekbang-code/tree/master/formal-week-1
+
+### formal-week-２
+- 作业地址：https://github.com/JenkinWang/geekbang-code/tree/master/formal-week-２
+
+### formal-week-３
+- 作业地址：https://github.com/JenkinWang/geekbang-code/tree/master/formal-week-３
