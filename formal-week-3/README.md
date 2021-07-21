@@ -3,7 +3,7 @@
 - 可选：完善 my-rest-client 框架 POST ⽅法，实现 org.geektimes.rest.client.DefaultInvocationBuilder#buildPost ⽅法
 
 ---
-实现｀POST｀接口请求｀http://127.0.0.1:8080/actuator/shutdown｀：
+实现 `POST` 接口请求 `http://127.0.0.1:8080/actuator/shutdown`：
 ```java
     interface PostShutDown {
         @POST
